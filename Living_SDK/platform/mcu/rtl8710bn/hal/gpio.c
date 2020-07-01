@@ -61,7 +61,7 @@ int32_t hal_gpio_init( gpio_dev_t *gpio )
 {
 	if(!gpio)
 		return -1;
-
+	sys_jtag_off();
 	gpio->priv = malloc(sizeof(gpio_objs_t));
 
 	gpio_t *gpio_obj = &(((gpio_objs_t *)(gpio->priv))->gpio_obj);
