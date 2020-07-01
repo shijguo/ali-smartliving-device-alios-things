@@ -5,15 +5,16 @@
 #define PWM_NUM 5
 static pwmout_t PWM_OBJ[PWM_NUM];
 static PinName PWM_MAP[PWM_NUM] = {
-    [0] = PA_22,
-    [1] = PA_0,
-    [2] = PA_12,
-    [3] = PA_14,
+    [0] = PA_14,
+    [1] = PA_15,
+    [2] = PA_0,
+    [3] = PA_12,
     [4] = PA_5,
 };
 
 int32_t hal_pwm_init(pwm_dev_t * pwm)
 {
+    sys_jtag_off();
     static int init_clk = 0;
 
     if (pwm->port >= PWM_NUM) {
