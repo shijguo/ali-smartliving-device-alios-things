@@ -139,7 +139,7 @@
 
 /*must reserve enough stack size for timer cb will consume*/
 #ifndef RHINO_CONFIG_TIMER_TASK_STACK_SIZE
-#define RHINO_CONFIG_TIMER_TASK_STACK_SIZE   300
+#define RHINO_CONFIG_TIMER_TASK_STACK_SIZE   512
 #endif
 #ifndef RHINO_CONFIG_TIMER_RATE
 #define RHINO_CONFIG_TIMER_RATE              1
@@ -219,6 +219,19 @@
 /* kernel trace conf */
 #ifndef RHINO_CONFIG_TRACE
 #define RHINO_CONFIG_TRACE                   0
+#endif
+
+/* lowpower conf */
+#ifndef WIFI_CONFIG_SUPPORT_LOWPOWER
+#define WIFI_CONFIG_SUPPORT_LOWPOWER         0
+#endif
+
+// #ifndef WIFI_CONFIG_LISTENSET_BINIT
+// #define WIFI_CONFIG_LISTENSET_BINIT          0
+// #endif
+
+#ifndef WIFI_CONFIG_LISTEN_INTERVAL
+#define WIFI_CONFIG_LISTEN_INTERVAL          1
 #endif
 
 #endif /* CONFIG_H */

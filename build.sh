@@ -99,7 +99,7 @@ function update_golden_product()
 
 if [[ "${type}-${app}" == "Smart_outlet-smart_outlet_meter" ]] || [[ "${type}-${app}" == "Smart_lighting-smart_led_strip" ]] || [[ "${type}-${app}" == "Smart_lighting-smart_led_bulb" ]]; then
 	echo 'golden sample product--------------------'
-	update_golden_product $type $app
+	# update_golden_product $type $app
 fi
 
 if [[ -d Products/$type/$app ]] && [[ ! -f prebuild/lib/board_$board.a ]]; then
