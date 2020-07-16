@@ -15,7 +15,7 @@ Living_SDK/.openocd_cfg
 Living_SDK/copy_bootloader_output_for_eclipse
 Living_SDK/copy_output_for_eclipse
 Living_SDK/*.sw*
-Living_SDK/build/compiler
+#Living_SDK/build/compiler
 Living_SDK/build/OpenOCD
 Living_SDK/si
 Living_SDK/.cproject
